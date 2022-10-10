@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- THIS JS SCRIPT IS FOR SELECTING THE INSTITUTE AND Department -->
+  <script type="text/javascript">
+    var citiesByState = {
+      CSPIT: ["CE", "CSE", "IT", "MECHANICAL", "CIVIL", "ELECTRICAL","MTECH CIVIL","MTECH ME","MTECH CE","MTECH EC","MTECH EE","Ph.D"],
+      DEPSTAR: ["CE", "CSE", "IT"],
+      IIIM: ["MBA", "BBA", "Ph.D"],
+      RPCP: ["B.PHARM", "M.PHARM","Ph.D"],
+      PDPIAS: ["BSC BIOLOGICAL SCIENCES","BSC PHYSICS","MSC BIOLOGICAL SCIENCES","MSC PHYSICS","MSC AOC","MATHEMATICS","Ph.D"],
+      NURSING: ["BSC NURSING","GNM NURSING","MSC NURSING","Ph.D"],
+      CMPICA: ["BCA","BSC IT","MCA","MSC IT","Ph.D"],
+
+    }
+    function makeSubmenu(value) {
+      if (value.length == 0) document.getElementById("citySelect").innerHTML = "<option></option>";
+      else {
+        var citiesOptions = "";
+        for (cityId in citiesByState[value]) {
+          citiesOptions += "<option>" + citiesByState[value][cityId] + "</option>";
+        }
+        document.getElementById("citySelect").innerHTML = citiesOptions;
+      }
+    }
+    function displaySelected() {
+      var country = document.getElementById("countrySelect").value;
+      var city = document.getElementById("citySelect").value;
+      alert(country + "\n" + city);
+    }
+    function resetSelection() {
+      document.getElementById("countrySelect").selectedIndex = 0;
+      document.getElementById("citySelect").selectedIndex = 0;
+    }
+  </script>
+
+  <!-- this line shows the description under the website link to get the idea of website. -->
+  <meta name="Description" content="This website is for sports event management.">
+
+  <!-- this line allows the search engine to show the website in public -->
+  <meta name="robots" content="INDEX, FOLLOW">
+
+  <title>Student Registeration Form</title>
+  <link rel="stylesheet" href="studentregister.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<!-- this is for background image  -->
+
+<body style="background-image:url('studentregister.jpg');">
+
+  <!-- this is heading  -->
+  <b1>
+    <h2 id="heading">REGISTERATION FORM FOR SPOURAL SPORTS</h2>
+  </b1>
+
+  <div
+    style="text-align: center; border-radius: 15px; margin-left: 400px; margin-right: 400px; padding-bottom: 100px; padding-top: 50px; background-color: lightblue;">
+
+    <!-- this is to link the backend link  -->
+    <form action=""></form>
+
+    <!-- this is for first name -->
+    <div>
+      First name: <input type="text" id="fname" name="fir_ame"><br>
+    </div>
+    <br>
+
+    <!-- this is for last name -->
+    <div>
+      Last name: <input type="text" id="lname" name="las_name"><br>
+    </div>
+    <br>
+
+    <!-- this is for id number  -->
+    <div>
+      Id number: <input type pattern="[a-zA-Z0-9]*" id="rollnumber" name="roll_num"><br>
+    </div>
+    <br>
+
+    <!-- THIS IS FOR Institute AND Department -->
+    <select id="countrySelect" size="1" onchange="makeSubmenu(this.value)">
+      <option value="" disabled selected>Choose Institute</option>
+      <option>CSPIT</option>
+      <option>DEPSTAR</option>
+      <option>IIIM</option>
+      <option >RPCP</option>
+      <option >PDPIAS</option>
+      <option >CMPICA</option>
+      <option >NURSING</option>
+      </select>
+      <select id="citySelect" size="1" >
+      <option value="" disabled selected>Choose Department</option>
+      <option></option>
+      </select>
+      <!-- <button onclick="displaySelected()">show selected</button> -->
+      <br>
+      <br>
+    <!-- this is for gender -->
+    <div>
+      Gender:
+      Male <input type="radio" name="mygender" value="Male" required>
+      Female <input type="radio" name="mygender" value="Female" required>
+      Others <input type="radio" name="mygender" value="Others" required>
+    </div>
+    <br>
+
+    <!-- this is for selecting the sports -->
+    <div>
+      Select the Sport to participate:
+      <select name="sport" id="sports">
+        <option value="select">SELECT SPORTS</option>
+        <option value="CRICKET" name="cricket">CRICKET</option>
+        <option value="FOOTBALL" name="football">FOOTBALL</option>
+        <option value="VOLLEYBALL" name="volleyball">VOLLEYBALL</option>
+        <option value="BADMINTON" name="badminton">BADMINTON</option>
+        <option value="KABADDI" name="kabaddi">KABADDI</option>
+        <option value="TUG OF WAR" name="tug of war">TUG OF WAR</option>
+      </select>
+    </div>
+    <br>
+    <br>
+
+    <!-- this for submission -->
+    <input class="btn btn-primary" type="submit" value="Submit" style="margin-right: 40px;">
+
+    <!-- this is for reset -->
+    <input class="btn btn-primary" type="reset" value="Reset">
+    <br>
+
+  </div>
+
+</body>
+
+</html>

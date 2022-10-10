@@ -1,0 +1,64 @@
+/* this is for the heading element in the html page  */
+#heading {
+    text-align: center;
+    color: white;
+}
+
+/* this is for the fname element in the html page  */
+#fname {
+    /* this tag changes the width */
+    width: auto;
+    text-align: justify;
+    margin: 10px 0;
+}
+
+/* this is for the lname element in the html page  */
+#lname {
+    width: auto;
+    text-align: justify;
+    margin: 10px 0;
+}
+
+/* this is for rollnumber elemnet in the html page */
+#rollnumber {
+    width: auto;
+    text-align: justify;
+    margin: 10px 0;
+}
+
+/* this is for the institute of the html page */
+#institute {
+    width: auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
+/* this is for the department of the html page */
+#department {
+    width: auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
+/* this is for sports element of the html page */
+#sports {
+    width: auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
+/* this is for submit element of the html page */
+#submit {
+    text-align: center;
+}
+
+/* this is for reset element of the html page */
+#reset {
+    text-align: center;
+}
