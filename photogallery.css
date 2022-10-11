@@ -1,0 +1,15 @@
+img {
+    height: 500px;
+    width: 500px;
+    padding-left: 100px;
+    padding-bottom: 50px;
+}
+
+h1 {
+    text-align: center;
+    color: blue;
+}
+
+body {
+    background-color: lightblue;
+}
